@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <!-- <bean id="student" class="student.StudentDetails">
+        <property name="name" value="John"></property>
+        <property name=""></property>
+        </bean> -->
+        
+        <bean id="stu" class="com.bridgelabz.practiceSpring12.student.StudentDetails">
+        	<constructor-arg value="John" type="String"></constructor-arg>
+        	<constructor-arg>
+        		<ref bean="ad"/>
+        	</constructor-arg>
+        </bean>
+        
+        <bean id="ad" class="com.bridgelabz.practiceSpring12.student.Address">
+        	<constructor-arg value="Bangalore"></constructor-arg>
+        	<constructor-arg value="Karnataka"></constructor-arg>
+        	<constructor-arg value="560047" type="int"></constructor-arg>
+        </bean>
+        
+</beans>
