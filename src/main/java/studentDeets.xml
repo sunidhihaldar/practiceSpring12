@@ -7,11 +7,24 @@
         
         <!-- <bean id="student" class="student.StudentDetails">
         <property name="name" value="John"></property>
-        <property name=""></property>
+        <property name="" ref=""></property>
+        <property name="">
+        <list>
+        <value>1<value>
+        <value>2<value>
+        </list>
+        </property>
         </bean> -->
         
         <bean id="stu" class="com.bridgelabz.practiceSpring12.student.StudentDetails">
         	<constructor-arg value="John" type="String"></constructor-arg>
+        	<constructor-arg>
+        		<list>
+        			<value>10</value>
+        			<value>20</value>
+        			<value>30</value>
+        		</list>
+        	</constructor-arg>
         	<constructor-arg>
         		<ref bean="ad"/>
         	</constructor-arg>
